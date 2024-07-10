@@ -47,7 +47,7 @@ class Catalogo:
         self.conn.commit()
         return self.conector.rowcount > 0
 
-catalogo = Catalogo(host='localhost', user='root', password='1451620', database='miapp', port=3306)
+catalogo = Catalogo(host='localhost', user='root', password='', database='miapp', port=3306)
 
 @app.route('/')
 def home():
