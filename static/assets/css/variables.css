@@ -1,0 +1,38 @@
+:root {
+    /* COLORES */
+    --base-color: #000;
+    --counter-baseColor: #fff;
+    --secondary-color: #343a40;
+    --alternative-color: #154360;
+    /*-----------------------------------------*/
+    /* TIPOGRAFIAS */
+    --base-font: 'Roboto',
+        sans-serif;
+    --secondary-font: 'Segoe UI',
+        sans-serif;
+    --alternative-font: 'Arial',
+        sans-serif;
+    /*------------------------------------------*/
+    /* TAMAÑO DE FUENTES */
+    --font-display: 2.5em;
+    /* Encabezados */
+    --font-jumbo: 1.6em;
+    /* Títulos destacados */
+    --font-xlarge: 1.3em;
+    /* Subtítulos */
+    --font-large: 1.1em;
+    /* Contenido principal */
+    --font-medium: 1em;
+    /* Párrafos */
+    --font-small: 0.9em;
+    /* Textos de menor importancia */
+    --font-xsmall: 0.8em;
+    /* Pie de página */
+    /*------------------------------------------*/
+    /* ESPACIOS */
+    --spacing-24: 1.5em;
+    --spacing-16: 1em;
+    --spacing-12: 0.75em;
+    --spacing-8: 0.5em;
+    /*------------------------------------------*/
+}

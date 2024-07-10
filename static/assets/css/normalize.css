@@ -1,0 +1,204 @@
+/* MODO OSCURO */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --base-color: #FFFFFF;
+        --counter-baseColor: #000000;
+        --alternative-color: #1e88e5;
+    }
+}
+
+/* MODO DE ALTO CONTRASTE */
+@media (prefers-contrast-scheme: hight) {
+    :root {
+        --base-color: black;
+        --counter-baseColor: white;
+    }
+}
+
+/* MODO SIN ANIMACIONES */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        -webkit-animation: none !important;
+        animation: none !important;
+        -webkit-transition: none !important;
+        transition: none !important;
+    }
+}
+
+/* RESETEO DE MARGENES, RELLENOS Y VISUALIZACIÓN ESTANDAR*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+*::before,
+*::after {
+    display: block;
+}
+
+/* GARANTIZAR QUE LOS ELEMENTOS MULTIMEDIA 
+SE AJUSTEN A SU CONTENEDOR Y SEAN RESPONSIVOS */
+img,
+picture,
+video,
+iframe,
+figure {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    /* OPCIONAL PARA ADAPTAR LA IMAGEN TANTO EN CENTRADO COMO EN TAMAÑO */
+    -webkit-object-fit: cover;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-object-position: center center;
+    -o-object-position: center center;
+    object-position: center center;
+}
+
+/* RESTABLECER ESTILO DE LOS ENLACES PARA QUE SEAN CAJAS */
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+/* SALVO ENLACES DENTRO DE PARRAFOS */
+p a {
+    display: inline;
+}
+
+/* QUITAR LA VIÑETA (Punto) DE CADA ELEMENTO DE UNA LISTA ORDENADA */
+li {
+    list-style-type: none;
+}
+
+/* DESPLAZAMIENTO ENTRE SECCIONES O ANCLAS DE MANERA SUAVE */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+    font-size: 1em;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    color: inherit;
+    overflow-wrap: break-word;
+}
+
+/* QUITAR COMILLAS Y CONTENIDO ADICIONAL A LAS CITAS Y NOTAS CORTAS*/
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+/* DIFERENCIAR CITAS CORTAS DEL TEXTO PLANO */
+q {
+    font-style: italic;
+}
+
+/* CONTRASTE AL SELECCIONAR TEXTO EN FIREFOX  */
+::-moz-selection {
+    background-color: var(--base-color);
+    color: var(--counter-baseColor);
+}
+
+/* CONTRASTE AL SELECCIONAR TEXTO */
+::selection {
+    background-color: var(--base-color);
+    color: var(--counter-baseColor);
+}
+
+/* ESTILIZAR UNIFORMEMENTE LOS ELEMENTOS DEL FORMULARIO 
+PROPORCIONANDO UNA APARIENCIA COHERENTE  */
+form,
+input,
+textarea,
+select,
+button,
+label {
+    font-family: inherit;
+    font-size: inherit;
+    /*DIVISIÓN DE PALABRAS EN LOS ELEMENTOS DE TEXTO*/
+    hyphens: auto;
+    /*----------------------------------------------*/
+    background-color: transparent;
+    color: inherit;
+    display: block;
+    /* ELIMINAN EL ASPECTO PREDETERMINADO DEL SISTEMA OPERATIVO */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* RESETEO DE TABLAS */
+table,
+tr,
+td {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* SETEO DE LOS ELEMENTOS SVG */
+svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+}
+
+/* SETEO DE LOS SVG EN PÁRRAFOS PARA QUE SE ADECUE AL TEXTO */
+p svg {
+    display: inline;
+    width: initial;
+}
+
+/* SETEO GENÉRICO PARA TODA LA WEB */
+body {
+    /* BODY CON AL MENOS EL MISMO TAMAÑO QUE LA PANTALLA
+    min-height: 100vh;
+    /* -------------------------------------------------*/
+    /* LO AJUSTAMOS A LA CONFIGURACIÓN DEL USUARIO */
+    font-size: 100%;
+    /* --------------------------------------------*/
+    font-family: var(--base-font);
+    color: var(--base-color);
+    line-height: var(--spacing-24);
+    /*DIVISIÓN DE PALABRAS EN LOS ELEMENTOS DE TEXTO*/
+    /* hyphens: auto; */
+    /* --------------------------------------------*/
+    /*SUAVIZADO DE FUENTES*/
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+}
+
+/* Elementos de alta prioridad (modales, menús desplegables, información sobre herramientas) 
+siempre aparecerán encima de los demás elementos en nuestra aplicación.
+#root,
+#__next {
+    isolation: isolate;
+}*/
